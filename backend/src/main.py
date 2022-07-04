@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from .endpointTest import test
+from .Endpoints import Item
 
 app = FastAPI()
 app.add_middleware(
@@ -10,7 +10,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-app.include_router(test.router)
+app.include_router(Item.router)
 
 @app.get("/")
 def home():

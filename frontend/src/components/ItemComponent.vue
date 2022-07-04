@@ -15,7 +15,7 @@ export default {
   },
   methods: {
     getMessage() {
-      axios.get('http://localhost:8000/test')
+      axios.get('http://localhost:8000/item')
         .then((res) => {
           this.msg = res.data.name
         })
